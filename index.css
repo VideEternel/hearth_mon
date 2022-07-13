@@ -1,0 +1,43 @@
+body{
+    background-color: #B7D3DF;
+}
+.cora{
+    width: 150px;
+    height: 150px;
+    background-color:#C9BBCF;
+    transform: rotate(45deg);
+    margin: 200px auto;
+    position: relative;
+    border-radius: 5px;
+    animation: palpitar 2s linear infinite alternate;
+}
+.cora:before,.cora:after{
+    content:"";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color:#C9BBCF;
+    border-radius: 50%;
+
+}
+.cora:before{
+    top: 0;
+    left: -50%;
+}
+.cora:after{    
+    top: -50%;
+    left: 0;
+}
+
+@keyframes palpitar{
+    0%{
+        transform: rotate(45deg) scale(1);
+    }
+    50%{
+        transform: rotate(45deg) scale(1.5);
+    }
+    100%{
+        transform: rotate(45deg) scale(1); 
+    }
+}
